@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nilton Nascimento - Móveis Planejados</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+   <header class="topo-site">
+    <div class="logo">NILTON <span>NASCIMENTO</span></div>
+    
+    <button class="menu-mobile-icon" onclick="toggleMenu()">
+        &#9776;
+    </button>
+
+    <nav class="menu" id="menuPrincipal">
+        <a href="#sobre" onclick="toggleMenu()">Sobre</a>
+        <a href="#servicos" onclick="toggleMenu()">Serviços</a>
+        <a href="#contato" onclick="toggleMenu()">Contato</a>
+        <button class="botao-login-admin" onclick="abrirModal()">ADMIN</button>
+    </nav>
+</header>
+
+
+    <section class="secao-destaque">
+        <div class="conteudo-destaque">
+            <h1>Seu Sonho em Madeira</h1>
+            <p>Transformamos seus espaços com móveis planejados de alta qualidade e design exclusivo.</p>
+            <a href="https://wa.me/5519983161919" class="botao-orcamento">Solicitar Orçamento Grátis</a>
+        </div>
+    </section>
+
+    <section id="sobre" class="secao-sobre" style="margin-top: 60px;">
+        <div class="texto-sobre">
+            <h2>15 Anos de Experiência</h2>
+            <p>A Nilton Nascimento Móveis Planejados cria ambientes únicos e personalizados. Nossa missão é transformar seus espaços com móveis de qualidade e design exclusivo.</p>
+            <br>
+            <p><strong>Venha fazer um orçamento.</strong></p>
+        </div>
+        <div class="foto-marcenaria">
+            <img src="" alt="imagem marcenaria">
+        </div>
+    </section>
+
+    <section id="servicos" class="secao-servicos">
+        <h2>Nossos Serviços</h2>
+        <div class="grid-servicos">
+            <div class="caixa-servico">
+                <h3>Cozinhas Planejadas</h3>
+                <p>Projetos funcionais para o coração da sua casa.</p>
+            </div>
+            <div class="caixa-servico">
+                <h3>Dormitórios</h3>
+                <p>Aproveitamento inteligente do espaço com design elegante.</p>
+            </div>
+            <div class="caixa-servico">
+                <h3>Escritórios</h3>
+                <p>Ambientes de trabalho otimizados para produtividade.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contato" class="rodape">
+        <div>
+            <h2>Nilton Nascimento Móveis Planejados</h2>
+            <p>Marcenaria de alto padrão para quem busca exclusividade e excelente atendimento.</p>
+        </div>
+        <div class="dados_contato">
+        <div>
+            <a href="https://wa.me/5519983161919"><p>Telefone: (19) 9.8316-1919</p></a>
+            <a href="https://wa.me/5519983161919"><p>WhatsApp: (19) 9.8316-1919</p></a>
+            <p>✉️ niltonjoiner@hotmail.com</p>
+            <p>🕒 Seg a Sex: 08h às 18h</p>
+        </div>
+        <div class="banner_insta">
+           <p>Aproveita e da uma olhada no nosso Instagram.</p>
+           <img class="logo_insta" src="/pageorcamento/static/img/ic_instagram.png" alt="logo instagram">
+           
+        </div>
+        </div>
+
+    </footer>
+
+    <div class="fundo-modal" id="modalAcesso" style="display: none;">
+    <div class="janela-login">
+        <button class="botao-fechar" onclick="fecharModal()">✕</button>
+        <h3 style="text-align: center; margin-bottom: 25px;">Acesso Proprietário</h3>
+        
+        <input type="text" id="usuario" class="campo-entrada" placeholder="Seu usuário">
+        <input type="password" id="senha" class="campo-entrada" placeholder="Sua senha">
+        
+        <button class="botao-entrar" onclick="validarLogin()">Acessar Orçamentos</button>
+        <p id="mensagemErro" class="erro-msg" style="display: none; color: red; text-align: center; margin-top: 10px;">
+            Usuário ou senha inválidos!
+        </p>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
