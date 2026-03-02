@@ -256,6 +256,32 @@ a {
     color: #333;
 }
 
+
+.direitos {
+    margin-top: 40px;
+    text-align: center;
+    width: 100%;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    padding-top: 20px;
+    font-size: 13px;
+    color: #bbb;
+}
+
+.direitos p {
+    margin: 5px 0;
+}
+
+.link-dev {
+    color: #a8ec09;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.link-dev:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
 /* RESPONSIVIDADE */
 @media (max-width: 768px) {
 
@@ -323,3 +349,4 @@ a {
         margin-left: 8px;
     }
 }
+
