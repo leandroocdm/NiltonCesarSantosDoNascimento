@@ -129,25 +129,40 @@
     </footer>
     
 
-    <div class="fundo-modal" id="modalAcesso" style="display: none;">
+    <div class="fundo-modal" id="modalAcesso">
+
     <div class="janela-login">
+
         <button class="botao-fechar" onclick="fecharModal()">✕</button>
-        <h3 style="text-align: center; margin-bottom: 25px;">Acesso Proprietário</h3>
-        
-        <input type="text" id="usuario" class="campo-entrada" placeholder="Seu usuário">
-        <input type="password" id="senha" class="campo-entrada" placeholder="Sua senha">
-        
-        <button class="botao-entrar" onclick="validarLogin()">Acessar Orçamentos</button>
-        <p id="mensagemErro" class="erro-msg" style="display: none; color: red; text-align: center; margin-top: 10px;">
+
+        <h3 class="titulo-login">Acesso Proprietário</h3>
+
+        <input type="text" 
+               id="usuario" 
+               class="campo-entrada" 
+               placeholder="Seu usuário">
+
+        <input type="password" 
+               id="senha" 
+               class="campo-entrada" 
+               placeholder="Sua senha">
+
+        <button class="botao-entrar" onclick="validarLogin()">
+            Acessar Orçamentos
+        </button>
+
+        <p id="mensagemErro" class="erro-msg">
             Usuário ou senha inválidos!
         </p>
+
     </div>
 
-    
 </div>
+
 
 
 
 <script src="script.js"></script>
 </body>
 </html>
+
