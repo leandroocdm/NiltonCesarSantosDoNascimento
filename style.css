@@ -7,6 +7,7 @@
 
 html, body {
     overflow-x: hidden;
+    min-height: 100vh;
     min-height: 100dvh;
 }
 
@@ -23,7 +24,9 @@ a {
     color: inherit; 
 }
 
+
 /* CABEÇALHO */
+
 .topo-site { 
     background: #fff; 
     padding: 20px 5%; 
@@ -46,7 +49,7 @@ a {
 }
 
 .logo span { 
-    color: #000000; 
+    color: #000; 
     margin-left: 20px;
 }
 
@@ -83,9 +86,12 @@ a {
     color: #fff; 
 }
 
+
 /* HERO */
+
 .secao-destaque { 
-    min-height: 100dvh; 
+    min-height: 100vh;
+    min-height: 100dvh;
     background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
     url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1920&q=80'); 
     background-size: cover; 
@@ -125,7 +131,9 @@ a {
     transform: translateY(-3px); 
 }
 
+
 /* SOBRE */
+
 .secao-sobre { 
     padding: 80px 10%; 
     display: flex; 
@@ -133,7 +141,7 @@ a {
     align-items: center; 
     background: #fff; 
     flex-wrap: wrap;
-    min-height: 100vh; 
+    min-height: 70vh;
 }
 
 .texto-sobre { 
@@ -143,17 +151,6 @@ a {
 .texto-sobre h2 { 
     font-size: 35px; 
     margin-bottom: 20px; 
-}
-
-.caixa-img{
-    height:200px;
-    overflow:hidden;
-}
-
-.foto-marcenaria{
-    width:100%;
-    height:100%;
-    object-fit:cover;
 }
 
 .imag-marcenaria{
@@ -171,17 +168,17 @@ a {
 
 
 /* SERVIÇOS */
+
 .secao-servicos { 
     padding: 80px 10%; 
     text-align: center; 
-    min-height: 100vh; 
 }
 
 .grid-servicos { 
     display: grid; 
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
-    gap: 15px; 
-    margin-top: 5px; 
+    gap: 30px; 
+    margin-top: 30px; 
 }
 
 .caixa-servico { 
@@ -191,12 +188,30 @@ a {
     box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
 }
 
-.caixa-servico h3 { 
-    color: #8b4513; 
-    margin-bottom: 15px; 
+.caixa-img{
+    height:200px;
+    overflow:hidden;
 }
 
+.foto-marcenaria{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition: 0.3s;
+}
+
+.caixa-servico:hover .foto-marcenaria{
+    transform: scale(1.05);
+}
+
+.caixa-servico h3 { 
+    color: #8b4513; 
+    margin: 15px 0; 
+}
+
+
 /* RODAPÉ */
+
 .rodape { 
     background: #1a1a1a; 
     color: #fff; 
@@ -204,8 +219,7 @@ a {
     display: flex; 
     justify-content: center; 
     flex-wrap: wrap; 
-    gap: 15px; 
-    min-height: 100vh; 
+    gap: 30px; 
 }
 
 .rodape h2 { 
@@ -242,47 +256,27 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    text-align: center;
-    gap: 30px;
+    gap: 10px;
 }
 
-/* MODAL */
-.fundo-modal { 
-    position: fixed; 
-    top: 0; 
-    left: 0; 
-    width: 100%; 
-    height: 100%; 
-    background: rgba(0,0,0,0.8); 
-    display: none; 
-    align-items: center; 
-    justify-content: center; 
-    z-index: 2000; 
+.linha-contato{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    text-decoration:none;
+    color:inherit;
 }
 
-.janela-login { 
-    background: #fff; 
-    padding: 40px; 
-    border-radius: 8px; 
-    width: 100%; 
-    max-width: 350px; 
-    position: relative; 
+.icon-contato{
+    width:20px;
+    height:20px;
 }
 
-/* MENU MOBILE */
-.menu-mobile-icon {
-    display: none;
-    font-size: 30px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: #333;
-}
 
+/* DIREITOS */
 
 .direitos {
-    margin-top: 10px;
+    margin-top: 20px;
     text-align: center;
     width: 100%;
     border-top: 1px solid rgba(255,255,255,0.2);
@@ -309,21 +303,45 @@ a {
 }
 
 
-.linha-contato{
-    display:flex;
-    align-items:center;
-    gap:10px;
-    text-decoration:none;
-    color:inherit;
-    padding-bottom: 8px;
+/* MODAL */
+
+.fundo-modal { 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    background: rgba(0,0,0,0.8); 
+    display: none; 
+    align-items: center; 
+    justify-content: center; 
+    z-index: 2000; 
 }
 
-.icon-contato{
-    width:20px;
-    height:20px;
+.janela-login { 
+    background: #fff; 
+    padding: 40px; 
+    border-radius: 8px; 
+    width: 100%; 
+    max-width: 350px; 
+    position: relative; 
 }
+
+
+/* MENU MOBILE */
+
+.menu-mobile-icon {
+    display: none;
+    font-size: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #333;
+}
+
 
 /* RESPONSIVIDADE */
+
 @media (max-width: 768px) {
 
     .menu-mobile-icon {
@@ -363,10 +381,6 @@ a {
         text-align: center;
     }
 
-    .dados_contato {
-        flex-direction: column;
-    }
-
     .secao-sobre {
         flex-direction: column;
     }
@@ -380,8 +394,11 @@ a {
     }
 }
 
+
 /* TELAS MUITO PEQUENAS */
+
 @media (max-width: 380px) {
+
     .logo {
         font-size: 18px;
     }
@@ -389,7 +406,9 @@ a {
     .logo span {
         margin-left: 8px;
     }
+
 }
+
 
 
 
