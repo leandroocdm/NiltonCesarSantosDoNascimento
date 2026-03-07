@@ -28,4 +28,7 @@ function toggleMenu() {
         } else {
             erro.style.display = 'block';
         }
+
     }
+
+    document.getElementById("anoAtual").textContent = new Date().getFullYear();
