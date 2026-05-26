@@ -180,24 +180,24 @@
                     const observacoes = document.getElementById('observacoes').value || 'Nenhuma observação fornecida.';
                     let valorTotal = parseFloat(document.getElementById('valorTotal').value);
                     if (isNaN(valorTotal)) throw new Error('Valor inválido. Por favor, insira um número.');
-                    *//valorTotal = valorTotal.toFixed(2);
+                   //valorTotal = valorTotal.toFixed(2);
                     //const valorAVista = (valorTotal * (1 - PIX_DISCOUNT_RATE)).toFixed(2);
                    // const valorCartao = (valorTotal * (1 + CARD_MARKUP_RATE)).toFixed(2);
 
                     const valorFormatado = valorTotal.toLocaleString('pt-BR', {
-    minimumFractionDigits: 2,
-    maximumFractionDigits: 2
-});
+                        minimumFractionDigits: 2,
+                        maximumFractionDigits: 2
+                    });
 
-const valorAVista = (valorTotal * (1 - PIX_DISCOUNT_RATE)).toLocaleString('pt-BR', {
-    minimumFractionDigits: 2,
-    maximumFractionDigits: 2
-});
-
-const valorCartao = (valorTotal * (1 + CARD_MARKUP_RATE)).toLocaleString('pt-BR', {
-    minimumFractionDigits: 2,
-    maximumFractionDigits: 2
-});
+                    const valorAVista = (valorTotal * (1 - PIX_DISCOUNT_RATE)).toLocaleString('pt-BR', {
+                        minimumFractionDigits: 2,
+                        maximumFractionDigits: 2
+                    });
+                    
+                    const valorCartao = (valorTotal * (1 + CARD_MARKUP_RATE)).toLocaleString('pt-BR', {
+                        minimumFractionDigits: 2,
+                        maximumFractionDigits: 2
+                    });
                     
                     const today = new Date().toLocaleDateString('pt-BR');
 
