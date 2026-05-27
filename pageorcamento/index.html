@@ -355,7 +355,9 @@
                         url: 'https://instagram.com/moveis_planejados_nascimento?igshid=YmMyMTA2M2Y='
                     });
 
-                    pdf.save('Orçamento.pdf');
+                   // pdf.save('Orçamento.pdf');
+                    pdf.save(`Orcamento_${nomeCliente.replace(/\s+/g, '_')}.pdf`);
+                    
                     alert('PDF gerado com sucesso!');
                 } catch (error) {
                     alert('Erro ao gerar o PDF: ' + error.message);
